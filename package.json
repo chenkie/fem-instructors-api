@@ -1,0 +1,23 @@
+{
+  "name": "fem-instructors-api",
+  "version": "0.0.0",
+  "description": "API for FEM Hapi.js Workshop",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "Hapi"
+  ],
+  "author": "Ryan Chenkie <ryan@elevatedigital.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "boom": "^4.2.0",
+    "hapi": "^16.1.0",
+    "joi": "^10.2.2"
+  }
+}
