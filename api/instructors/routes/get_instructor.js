@@ -1,22 +1,30 @@
 'use strict';
 
+const Boom = require('boom');
+const query = require('./../queries/instructors');
 const instructorsData = require('../../../data/instructors');
+const paramsValidator = require('./../validation/get_instructor').paramsValidator;
 
 module.exports = {
   method: 'GET',
   path: '/api/instructors/{slug}',
   config: {
+    pre: [{ method: query.getGithubImage, assign: 'image' }],
     handler: (req, res) => {
-
-      const instructor = instructorsData.filter(
+      let instructor = instructorsData.find(
         instructor => instructor.slug === req.params.slug
-      )[0];
+      );
 
       if (!instructor) {
-        return res('no instructor found');
+        return res(Boom.badRequest('Instructor not found!'));
       }
 
+      instructor.avatar = req.pre.image;
+
       res(instructor);
+    },
+    validate: {
+      params: paramsValidator
     }
   }
 };
