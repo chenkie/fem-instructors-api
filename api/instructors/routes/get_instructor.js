@@ -8,21 +8,21 @@ const paramsValidator = require('./../validation/get_instructor').paramsValidato
 module.exports = {
   method: 'GET',
   path: '/api/instructors/{slug}',
+  handler: (request, reply) => {
+    let instructor = instructorsData.find(
+      instructor => instructor.slug === request.params.slug
+    );
+
+    if (!instructor) {
+      return reply(Boom.badRequest('Instructor not found!'));
+    }
+
+    instructor.avatar = request.pre.image;
+
+    reply(instructor);
+  },
   config: {
     pre: [{ method: query.getGithubImage, assign: 'image' }],
-    handler: (req, res) => {
-      let instructor = instructorsData.find(
-        instructor => instructor.slug === req.params.slug
-      );
-
-      if (!instructor) {
-        return res(Boom.badRequest('Instructor not found!'));
-      }
-
-      instructor.avatar = req.pre.image;
-
-      res(instructor);
-    },
     validate: {
       params: paramsValidator
     }

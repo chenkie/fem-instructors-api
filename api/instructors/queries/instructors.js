@@ -4,25 +4,25 @@ const Boom = require('boom');
 const Wreck = require('wreck');
 let instructorsData = require('../../../data/instructors');
 
-const verifyUniqueInstructor = (req, res) => {
-  const name = req.payload.name;
+const verifyUniqueInstructor = (request, reply) => {
+  const name = request.payload.name;
   const existingInstructor = instructorsData.find(
     instructor => instructor.name === name
   );
   if (existingInstructor) {
-    return res(Boom.badRequest('Instructor exists'));
+    return reply(Boom.badRequest('Instructor exists'));
   }
-  return res(req.payload);
+  return reply(request.payload);
 };
 
-const createInstructorSlug = (req, res) => {
-  const name = req.payload.name;
+const createInstructorSlug = (request, reply) => {
+  const name = request.payload.name;
   const slug = name.split(' ').join('-');
-  res(slug.toLowerCase());
+  reply(slug.toLowerCase());
 };
 
-const getGithubImage = (req, res) => {
-  const slug = req.params.slug;
+const getGithubImage = (request, reply) => {
+  const slug = request.params.slug;
   const githubUser = instructorsData.find(
     instructor => instructor.slug == slug
   ).github;
@@ -35,8 +35,8 @@ const getGithubImage = (req, res) => {
     `https://api.github.com/users/${githubUser}`,
     options,
     (error, response, payload) => {
-      if (error) return res(Boom.badRequest(error));
-      res(payload.avatar_url);
+      if (error) return reply(Boom.badRequest(error));
+      reply(payload.avatar_url);
     }
   );
 };

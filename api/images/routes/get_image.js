@@ -4,10 +4,10 @@ module.exports = {
   method: 'GET',
   path: '/api/images/{name}',
   config: {
-    handler: (req, res) => {
-      const image = req.params.name;
+    handler: (request, reply) => {
+      const image = request.params.name;
 
-      res.file(image);
+      reply.file(image);
     }
   }
 };
