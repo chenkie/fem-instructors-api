@@ -34,6 +34,8 @@ You can also run the API in development mode to get automatic server restarts wi
 npm run dev
 ```
 
+The API will be served at `http://localhost:3001`.
+
 ## Switching Branches
 
 To see all the available branches, view them with Git.
