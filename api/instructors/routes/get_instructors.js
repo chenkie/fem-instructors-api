@@ -8,6 +8,14 @@ module.exports = {
   method: 'GET',
   path: '/api/instructors',
   handler: (request, reply) => {
+    const trimmedData = instructorsData.map(instructor => {
+      return {
+        id: instructor.id,
+        name: instructor.name,
+        slug: instructor.slug
+      };
+    });
+
     const sortDirection = request.query.sortDirection;
     const sortKey = request.query.sortKey;
 
@@ -21,7 +29,7 @@ module.exports = {
       }
     };
 
-    reply(sortData(instructorsData, sortDirection, sortKey));
+    reply(sortData(trimmedData, sortDirection, sortKey));
   },
   config: {
     validate: {
