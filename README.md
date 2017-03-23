@@ -4,6 +4,10 @@
 
 This is a Hapi.js API built specifically for my Getting Started with Hapi.js workshop at Front End Masters. There are several branches, each of which corresponds to a module in the worshop. Each module has two branches associated with it: one to act as a starting point (with minimal code toward the solution) and another to show the solution.
 
+## Accompanying Angular App
+
+The aim of the workshop is to show how to build a data API for a single page application. To use this API from a demo Angular application, see the [Front End Masters Instructors App](https://github.com/chenkie/fem-instructors-app).
+
 ## Running the API
 
 To get started, clone the repo.
