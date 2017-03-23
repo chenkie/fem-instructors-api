@@ -2,7 +2,7 @@
 
 ## What's This?
 
-This is a Hapi.js API built specifically for my Getting Started with Hapi.js workshop at Front End Masters. There are several branches, each of which corresponds to a module in the worshop. Each module has two branches associated with it: one to act as a starting point (with minimal code toward the solution) and another to show the solution.
+This is a Hapi.js API built specifically for my Getting Started with Hapi.js workshop at [Front End Masters](https://frontendmasters.com/). There are several branches, each of which corresponds to a module in the worshop. Each module has two branches associated with it: one to act as a starting point (with minimal code toward the solution) and another to show the solution.
 
 ## Accompanying Angular App
 
