@@ -15,7 +15,7 @@ const verifyUniqueInstructor = (request, reply) => {
   if (existingInstructor) {
     return reply(Boom.badRequest('Instructor exists'));
   }
-  return reply(request.payload);
+  return reply();
 };
 
 // We need to create a slug for the instructor.
