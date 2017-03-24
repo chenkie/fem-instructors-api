@@ -11,6 +11,9 @@ const verifyUniqueInstructor = (request, reply) => {
   const existingInstructor = instructorsData.find(
     instructor => instructor.name === name
   );
+  if (existingInstructor) {
+    return reply({ message: 'Instructor exists!' });
+  }
   return reply();
 };
 
