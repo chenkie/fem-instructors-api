@@ -27,5 +27,38 @@ module.exports = [
       'AngularJS 1.x Application Development',
       'Angular 1.x Essentials'
     ]
+  },
+  {
+    id: 3,
+    name: 'Kyle Simpson',
+    slug: 'kyle-simpson',
+    email: 'getify@gmail.com',
+    twitter: '@getify',
+    github: 'getify',
+    courses: [
+      'ES6: The Right Parts',
+      'Rethinking Asynchronous JavaScript',
+      'Functional-Lite JavaScript',
+      'Organizing JavaScript Functionality',
+      'Coercion in JavaScript',
+      'Introduction to JavaScript Programming',
+      'Real-Time Web with Node.js',
+      'Advanced JavaScript',
+      'Website Performance'
+    ]
+  },
+  {
+    id: 4,
+    name: 'Brian Holt',
+    slug: 'brian-holt',
+    email: '',
+    twitter: '@holtbt',
+    github: 'btholt',
+    courses: [
+      'Complete Intro to React v2 (feat. Router v4 and Redux)',
+      'Complete Introduction to React (feat. Redux and React Router)',
+      'Four Semesters of Computer Science in 5 Hours',
+      'Choosing a JavaScript Framework'
+    ]
   }
 ];
