@@ -25,7 +25,6 @@ server.connection({
 // and creating new routes with that configuration here
 server.route(require('./api/instructors/routes/get_instructors'));
 server.route(require('./api/instructors/routes/get_instructor'));
-server.route(require('./api/instructors/routes/post_instructor'));
 
 // Starting the server is as simple as calling
 // server.start. We can throw an error if something
