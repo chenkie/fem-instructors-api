@@ -9,13 +9,7 @@ const path = require('path');
 // an instance of Hapi.Server. We leave it
 // bare or we can add some configuration
 const server = new Hapi.Server({
-  connections: {
-    routes: {
-      files: {
-        relativeTo: path.join(__dirname, 'public')
-      }
-    }
-  }
+  // tell Hapi where the public assets are
 });
 
 // We need to specify a connection, which
@@ -34,18 +28,13 @@ server.connection({
 
 // The simple way to register a plugin
 // is to pass the module and a callback
-server.register(Inert, () => {});
+
+// register the Inert plugin
 
 // To configure the plugin, we can pass
 // an object which has an options key
-server.register({
-  register: Geolocate,
-  options: {
-    enabledByDefault: true
-  }
-}, err => {
-  if (err) console.log(err);
-});
+
+// register the Geolocate plugin
 
 // We're defining our route configuration in separate files
 // and creating new routes with that configuration here
