@@ -21,10 +21,8 @@ server.connection({
   }
 });
 
-// We're defining our route configuration in separate files
-// and creating new routes with that configuration here
-server.route(require('./api/instructors/routes/get_instructors'));
-server.route(require('./api/instructors/routes/get_instructor'));
+// Create server routes for the 
+// GET /instructors and GET /instructor/{slug} endpoints
 
 // Starting the server is as simple as calling
 // server.start. We can throw an error if something

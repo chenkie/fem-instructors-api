@@ -7,11 +7,9 @@ module.exports = {
   path: '/api/instructors/{slug}',
   config: {
     handler: (request, reply) => {
-      let instructor = instructorsData.find(
-        instructor => instructor.slug === request.params.slug
-      );
+      // get the specified instructor
 
-      reply(instructor);
+      // reply with the data
     }
   }
 };
