@@ -3,7 +3,6 @@
 const Boom = require('boom');
 const query = require('./../queries/instructors');
 const instructorsData = require('../../../data/instructors');
-const paramsValidator = require('./../validation/get_instructor').paramsValidator;
 
 module.exports = {
   method: 'GET',

@@ -2,7 +2,6 @@
 
 const Boom = require('boom');
 const instructorsData = require('../../../data/instructors');
-const queryValidator = require('./../validation/get_instructors').queryValidator;
 const sortBy = require('lodash').sortBy;
 
 module.exports = {

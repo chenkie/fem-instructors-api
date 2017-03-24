@@ -2,7 +2,6 @@
 
 const query = require('./../queries/instructors');
 let instructorsData = require('./../../../data/instructors');
-const payloadValidator = require('./../validation/post_instructor').payloadValidator;
 
 module.exports = {
   method: 'POST',
