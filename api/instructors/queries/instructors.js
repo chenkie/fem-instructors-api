@@ -37,6 +37,8 @@ const getGithubImage = (request, reply) => {
     instructor => instructor.slug == slug
   ).github;
 
+  if (!githubUser) return reply();
+
   const options = {
     headers: { 'User-Agent': 'fem-instructors-api' },
     json: true
