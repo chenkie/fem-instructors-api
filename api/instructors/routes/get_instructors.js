@@ -1,6 +1,5 @@
 'use strict';
 
-const Boom = require('boom');
 const instructorsData = require('../../../data/instructors');
 const sortBy = require('lodash').sortBy;
 
@@ -11,9 +10,6 @@ module.exports = {
     handler: (request, reply) => {
 
       // If there's no data to be found, throw back a 404
-      if (!instructorsData.length) {
-        reply(Boom.notFound('No instrucors found!'));
-      }
 
       // Let's get just the id, name, and slug when we make
       // a request for all instructors

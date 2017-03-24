@@ -1,6 +1,5 @@
 'use strict';
 
-const Boom = require('boom');
 const query = require('./../queries/instructors');
 const instructorsData = require('../../../data/instructors');
 
@@ -16,9 +15,6 @@ module.exports = {
 
       // If no instructor is found, let's use Boom
       // to send back a 404
-      if (!instructor) {
-        return reply(Boom.notFound('Instructor not found!'));
-      }
 
       // The image that is fetched in the getGithubImage
       // method is avaiable on the pre object at a key of 
