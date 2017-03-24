@@ -13,9 +13,6 @@ module.exports = {
         instructor => instructor.slug === request.params.slug
       );
 
-      // If no instructor is found, let's use Boom
-      // to send back a 404
-
       // The image that is fetched in the getGithubImage
       // method is avaiable on the pre object at a key of 
       // 'image' because we assigned it that in the route

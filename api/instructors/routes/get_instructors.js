@@ -9,8 +9,6 @@ module.exports = {
   config: {
     handler: (request, reply) => {
 
-      // If there's no data to be found, throw back a 404
-
       // Let's get just the id, name, and slug when we make
       // a request for all instructors
       const trimmedData = instructorsData.map(instructor => {
