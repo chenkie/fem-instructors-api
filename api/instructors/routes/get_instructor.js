@@ -28,9 +28,6 @@ module.exports = {
       instructor.avatar = request.pre.image;
 
       reply(instructor);
-    },
-    validate: {
-      params: paramsValidator
     }
   }
 };

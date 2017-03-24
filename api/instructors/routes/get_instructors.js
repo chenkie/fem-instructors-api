@@ -43,9 +43,6 @@ module.exports = {
       };
 
       reply(sortData(trimmedData, sortDirection, sortKey));
-    },
-    validate: {
-      query: queryValidator
     }
   }
 };
