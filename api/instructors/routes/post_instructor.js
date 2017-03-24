@@ -7,10 +7,6 @@ module.exports = {
   method: 'POST',
   path: '/api/instructors',
   config: {
-    pre: [
-      { method: query.verifyUniqueInstructor },
-      { method: query.createInstructorSlug, assign: 'slug' }
-    ],
     handler: (request, reply) => {
       let submittedData = request.payload;
       submittedData.id = instructorsData.length + 1;

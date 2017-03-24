@@ -7,14 +7,10 @@ module.exports = {
   method: 'GET',
   path: '/api/instructors/{slug}',
   config: {
-    pre: [{ method: query.getGithubImage, assign: 'image' }],
     handler: (request, reply) => {
       let instructor = instructorsData.find(
         instructor => instructor.slug === request.params.slug
       );
-
-      // If no instructor is found, let's use Boom
-      // to send back a 404
 
       // The image that is fetched in the getGithubImage
       // method is avaiable on the pre object at a key of 
